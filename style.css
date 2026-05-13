@@ -261,26 +261,145 @@ background: rgba(229, 221, 221, 0.1);
   background: rgba(255, 255, 255, 0.1);
 }
 
-@media screen and (max-width: 768px) {
-  body {
+
+@media screen and (max-width: 1024px) {
+ 
+  .navbar {
+    padding: 16px 24px;
+  }
+ 
+  .nav-links {
+    gap: 24px;
+  }
+ 
+  .nav-links p {
     font-size: 14px;
   }
-
-  .menu {
-    display: none; 
+ 
+  .hero {
+    padding-top: 130px;
+    padding-left: 24px;
+    padding-right: 24px;
+    gap: 20px;
+  }
+ 
+  .titulo-fino {
+    font-size: 40px;
+  }
+ 
+  .titulo-grande {
+    font-size: 54px;
+  }
+ 
+  .hero-texto {
+    max-width: 420px;
+  }
+ 
+  .card {
+    width: 180px;
+  }
+ 
+  .barra-projetos {
+    gap: 14px;
+    padding: 14px 18px;
+  }
+ 
+  .video-thumbnail {
+    width: 110px;
+    height: 110px;
   }
 }
-
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .container {
-    width: 90%;
+ 
+ 
+/* ================================
+   MOBILE (até 768px)
+   ================================ */
+@media screen and (max-width: 768px) {
+ 
+  /* Navbar */
+  .navbar {
+    padding: 14px 20px;
   }
-}
-
-@media screen and (min-width: 1025px) {
-  .container {
-    width: 1200px;
-    margin: 0 auto;
+ 
+  .nav-links {
+    display: none;
+  }
+ 
+  /* Hero — empilha em coluna */
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 320px; /* espaço para a barra-projetos fixa */
+    gap: 0;
+  }
+ 
+  .hero-texto {
+    max-width: 100%;
+    order: 1;
+    margin-bottom: 24px;
+  }
+ 
+  .titulo-fino {
+    font-size: 32px;
+  }
+ 
+  .titulo-grande {
+    font-size: 44px;
+  }
+ 
+  /* Cards vão abaixo do texto */
+  .hero-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 2;
+    width: 100%;
+    gap: 12px;
+  }
+ 
+  .card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+ 
+  /* Barra de projetos — coluna no mobile */
+  .barra-projetos {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+    gap: 12px;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    border-radius: 14px;
+  }
+ 
+  .video {
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .video-thumbnail {
+    width: 100%;
+    max-width: 100%;
+    height: 160px;
+    border-radius: 8px;
+  }
+ 
+  .projetos {
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .projeto-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+ 
+  .btn-next {
+    align-self: flex-end;
   }
 }
